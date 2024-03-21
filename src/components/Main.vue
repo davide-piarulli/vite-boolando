@@ -8,12 +8,15 @@
       }
     </script>
 <template>
-  <div>
-    Main
-  </div>
+  <main>
+
+  </main>
 </template>
 
 
 <style lang="scss" scoped>
-
+@use "../assets/scss/partials/variables" as *;
+main {
+  height: 400px;
+}
 </style>
