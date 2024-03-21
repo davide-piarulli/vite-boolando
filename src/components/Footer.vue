@@ -43,8 +43,8 @@
 @use "../assets/scss/partials/variables" as *;
 footer {
   width: 100%;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: $bg-color-footer;
+  color: $text-primary;
   ul {
     justify-content: space-between;
     padding: 5px 0;
@@ -59,7 +59,8 @@ footer {
     font-size: 1.3rem;
   }
   a {
-    color: #d9f0e2;
+    color: $text-footer;
+;
     text-decoration: none;
     padding-right: 10px;
     &:hover{

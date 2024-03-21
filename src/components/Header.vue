@@ -1,7 +1,39 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      menu: [
+        {
+          title: "Donna",
+          link: "#",
+        },
+        {
+          title: "Uomo",
+          link: "#",
+        },
+        {
+          title: "Bambini",
+          link: "#",
+        },
+      ],
+      icons: [
+      {
+        title: "User",
+        link: "#",
+        pic: '<i class="fa-solid fa-user"></i>',
+      },
+      {
+        title: "Fav",
+        link: "#",
+        pic: '<i class="fa-regular fa-heart"></i>',
+      },
+      {
+        title: "Cart",
+        link: "#",
+        pic: '<i class="fa-solid fa-bag-shopping"></i>',
+      },
+    ],
+    };
   },
 };
 </script>
@@ -12,9 +44,9 @@ export default {
       <div class="container d-flex">
         <nav class="menu left">
           <ul class="d-flex">
-            <li><a href="#">Donna</a></li>
-            <li><a href="#">Uomo</a></li>
-            <li><a href="#">Bambini</a></li>
+            <li v-for="(item, index) in menu" :key="index">
+              <a href="#">{{ item.title }}</a>
+            </li>
           </ul>
         </nav>
 
@@ -25,14 +57,8 @@ export default {
         <div class="menu right">
           <nav>
             <ul class="d-flex">
-              <li>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-regular fa-heart"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+              <li v-for="(item, index) in icons" :key="index">
+                <a :href="item.link" v-html="item.pic"></a>
               </li>
             </ul>
           </nav>
@@ -63,7 +89,7 @@ header {
     .menu {
       width: 20%;
       ul a {
-        color: white;
+        color: $text-primary;
         text-decoration: none;
         font-size: 20px;
         &:hover {
