@@ -1,8 +1,10 @@
 <script>
   export default {
     props: {
-      productImage: String,
-      productText: String,
+      product: Object,
+    },
+    mounted(){
+
     }
   }
 </script>
@@ -11,8 +13,8 @@
   <main>
     
         <a href="#" class="card">
-          <img src="../assets/img/1.webp" alt="image1">
-          <img src="../assets/img/1b.webp" alt="" class="sec-image">
+          <img src="" alt="image1">
+          <img src="" alt="" class="sec-image">
           <span class="heart">&hearts;</span>
           <div class="badges">
             <span class="badge disc">-50%</span>
