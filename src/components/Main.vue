@@ -1,22 +1,24 @@
-    <script>
-      export default {
-        data(){
-          return {
-            
-          };
-        },
-      }
-    </script>
-<template>
-  <main>
+<script>
+import ProductCard from "./partials/ProductCard.vue";
+export default {
+  components: {
+    ProductCard
+  },
+  data() {
+    return {
 
-  </main>
+    };
+  },
+};
+</script>
+<template>
+  <section class="container ">
+    <div class="row d-flex">
+      <ProductCard />
+    </div>
+  </section>
 </template>
 
-
 <style lang="scss" scoped>
-@use "../assets/scss/partials/variables" as *;
-main {
-  height: 400px;
-}
+
 </style>
