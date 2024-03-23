@@ -13,17 +13,21 @@ export default {
   mounted() {
     console.log(database);
   },
-  methods
+  // methods
 };
 </script>
 <template>
   <section class="container ">
     <div class="row d-flex">
 
+      <!-- :frontImg="`/src/assets/img/${product.frontImage}`" -->
       <ProductCard 
         v-for="product in database.products" :key="product.id"
-        frontImg="`src/assets/img/${product.frontImage}`"
-        backImg="`src/assets/img/${}`"
+        :product="product"
+        :backImg="`/src/assets/img/${product.backImage}`"
+        :brand="product.brand"
+        :name="product.name"
+        :price="product.price"
       />
 
     </div>

@@ -2,6 +2,7 @@
   export default {
     props: {
       product: Object,
+
     },
     mounted(){
 
@@ -13,7 +14,8 @@
   <main>
     
         <a href="#" class="card">
-          <img src="" alt="image1">
+          <!-- <img src="../../assets/img/1.webp" alt="image1"> -->
+          <img :src="product.frontImage" alt="image1">
           <img src="" alt="" class="sec-image">
           <span class="heart">&hearts;</span>
           <div class="badges">
@@ -21,10 +23,10 @@
             <span class="badge sost">Sostenibilità</span>
           </div>
           <div class="info">
-            <span class="brand">Levi's</span>
-            <h4 class="prod-title">relaxed fit tee unisex</h4>
-            <span class="prod-disc-price">14,99 €</span>
-            <span class="prod-price">29,99 €</span>
+            <span class="brand">{{product.brand}}</span>
+            <h4 class="prod-title">{{product.name}}</h4>
+            <span class="prod-disc-price">14.99 €</span>
+            <span class="prod-price">{{product.price}} €</span>
           </div>
         </a>
 
