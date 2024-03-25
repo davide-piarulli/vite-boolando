@@ -14,9 +14,8 @@ export default {
 <template>
   <main>
     <a href="#" class="card">
-      <!-- <img src="../../assets/img/1.webp" alt="image1"> -->
       <img :src="getImagePath(product.frontImage)" :alt="product.frontImage" />
-      <img src="" alt="" class="sec-image" />
+      <img :src="getImagePath(product.backImage)" alt="product.backImage" class="sec-image" />
       <span class="heart">&hearts;</span>
       <div class="badges">
         <span class="badge disc">-50%</span>
@@ -40,6 +39,9 @@ export default {
   &:hover {
     opacity: 0.6;
   }
+  &:hover .sec-image {
+    display: block;
+  }
   img {
     max-width: 320px;
   }
@@ -58,41 +60,38 @@ export default {
     &:hover {
       color: red;
     }
-    .badges {
-      position: absolute;
-      bottom: 80px;
-      left: 0;
-    }
-    .badge {
-      padding: 5px 10px;
-      color: white;
-      font-weight: 700;
-    }
-    .disc {
-      background-color: red;
-    }
-    .sost {
-      background-color: #008000;
-    }
-    .brand {
-      font-size: 0.8rem;
-    }
-    .prod-disc-price {
-      color: #ff0000;
-      font-weight: 800;
-    }
-    .prod-price {
-      text-decoration: line-through;
-    }
-    .sec-image {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
   }
-}
-.card:hover .sec-image {
-  display: block;
+  .badges {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+  }
+  .badge {
+    padding: 5px 10px;
+    color: white;
+    font-weight: 700;
+  }
+  .disc {
+    background-color: red;
+  }
+  .sost {
+    background-color: #008000;
+  }
+  .brand {
+    font-size: 0.8rem;
+  }
+  .prod-disc-price {
+    color: #ff0000;
+    font-weight: 800;
+  }
+  .prod-price {
+    text-decoration: line-through;
+  }
+  .sec-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 </style>
