@@ -24,7 +24,6 @@ export default {
       <ProductCard 
         v-for="product in database.products" :key="product.id"
         :product="product"
-        :backImg="`/src/assets/img/${product.backImage}`"
         :brand="product.brand"
         :name="product.name"
         :price="product.price"
