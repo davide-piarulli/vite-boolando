@@ -20,7 +20,6 @@ export default {
   <section class="container ">
     <div class="row d-flex">
 
-      <!-- :frontImg="`/src/assets/img/${product.frontImage}`" -->
       <ProductCard 
         v-for="product in database.products" :key="product.id"
         :product="product"

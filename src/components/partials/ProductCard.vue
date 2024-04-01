@@ -53,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 @use "../../assets/scss/partials/variables" as *;
 .card {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
   img {
     max-width: 320px;
